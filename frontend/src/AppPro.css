@@ -1,0 +1,541 @@
+.hb-auth,
+.hb-shell,
+.hb-loading {
+  min-height: 100vh;
+}
+
+.hb-loading {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 14px;
+  background: #eef3f8;
+}
+
+.hb-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #cbd5e1;
+  border-top-color: #0f766e;
+  border-radius: 50%;
+  animation: hb-spin 0.8s linear infinite;
+}
+
+@keyframes hb-spin {
+  to { transform: rotate(360deg); }
+}
+
+.hb-auth {
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background:
+    linear-gradient(135deg, rgba(20, 184, 166, 0.15), transparent 34%),
+    linear-gradient(315deg, rgba(244, 63, 94, 0.11), transparent 30%),
+    #eef3f8;
+}
+
+.hb-auth-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.75fr);
+  gap: 28px;
+  width: min(1120px, 100%);
+  align-items: center;
+}
+
+.hb-auth-copy h1,
+.hb-topbar h1 {
+  margin: 12px 0;
+  color: #111827;
+  font-size: clamp(36px, 6vw, 74px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hb-auth-copy p,
+.hb-job p,
+.hb-empty p,
+.hb-user-chip strong,
+.hb-timeline-item span,
+.hb-shell aside p {
+  color: #64748b;
+}
+
+.hb-stat-strip,
+.hb-actions,
+.hb-tags,
+.hb-platforms div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hb-stat-strip span,
+.hb-tags span,
+.hb-platforms a {
+  border: 1px solid #bfd5da;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #164e63;
+  font-weight: 800;
+}
+
+.hb-auth-card,
+.hb-panel,
+.hb-job,
+.hb-metric,
+.hb-hero-panel,
+.hb-empty,
+.hb-platforms,
+.hb-timeline-item {
+  border: 1px solid #d8e0ea;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+}
+
+.hb-auth-card,
+.hb-panel,
+.hb-job,
+.hb-empty,
+.hb-platforms,
+.hb-timeline-item {
+  padding: 20px;
+}
+
+.hb-auth-card,
+.hb-form,
+.hb-search {
+  display: grid;
+  gap: 12px;
+}
+
+.hb-segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 5px;
+  border-radius: 8px;
+  background: #e2e8f0;
+}
+
+button,
+a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  gap: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  padding: 9px 12px;
+  background: #fff;
+  color: #172033;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  padding: 11px 12px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.hb-primary {
+  border-color: #0f766e;
+  background: #0f766e;
+  color: #fff;
+}
+
+.hb-danger {
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.hb-ghost,
+.hb-shell nav button,
+.hb-segmented button {
+  border: 0;
+  background: transparent;
+}
+
+.hb-segmented .active,
+.hb-shell nav .active {
+  background: #fff;
+  color: #0f766e;
+  font-weight: 900;
+}
+
+.hb-pill {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: #ccfbf1;
+  color: #115e59;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hb-pill.blue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.hb-pill.red {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.hb-pill.dark {
+  background: #263449;
+  color: #e5edf8;
+}
+
+.hb-shell {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.hb-shell > aside {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 24px;
+  background: #111827;
+  color: #fff;
+}
+
+.hb-shell aside h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.hb-shell nav {
+  display: grid;
+  gap: 8px;
+  margin: 28px 0;
+}
+
+.hb-shell nav button,
+.hb-ghost {
+  justify-content: flex-start;
+  color: #dbeafe;
+  padding-inline: 12px;
+}
+
+.hb-workspace {
+  padding: 28px;
+}
+
+.hb-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.hb-topbar h1 {
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+.hb-menu {
+  display: none;
+}
+
+.hb-user-chip {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid #d8e0ea;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.hb-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 18px;
+}
+
+.hb-hero-panel {
+  padding: 28px;
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.1), transparent 35%),
+    #fff;
+}
+
+.hb-hero-panel h2 {
+  margin: 14px 0 8px;
+  font-size: clamp(28px, 4vw, 46px);
+}
+
+.hb-metrics {
+  display: grid;
+  gap: 14px;
+}
+
+.hb-metric {
+  padding: 20px;
+}
+
+.hb-metric span {
+  color: #64748b;
+  font-weight: 800;
+}
+
+.hb-metric strong {
+  display: block;
+  margin-top: 6px;
+  color: #111827;
+  font-size: 38px;
+}
+
+.hb-search {
+  grid-template-columns: minmax(160px, 1fr) minmax(140px, 0.8fr) 150px auto;
+  margin-bottom: 18px;
+}
+
+.hb-jobs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hb-jobs.compact {
+  grid-template-columns: 1fr;
+}
+
+.hb-job {
+  display: grid;
+  gap: 12px;
+}
+
+.hb-job h3,
+.hb-panel h3,
+.hb-empty h3,
+.hb-platforms h3,
+.hb-timeline-item h3 {
+  margin: 0;
+}
+
+.hb-job p {
+  margin: 0;
+}
+
+.hb-job-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.hb-job-top > span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hb-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.hb-platforms {
+  margin-top: 16px;
+}
+
+.hb-drawer-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  justify-items: end;
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.hb-drawer {
+  width: min(500px, 100%);
+  height: 100%;
+  overflow-y: auto;
+  padding: 26px;
+  background: #fff;
+  color: #172033;
+}
+
+.hb-drawer-close {
+  float: right;
+}
+
+.hb-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.hb-detail-grid span {
+  border: 1px solid #d8e0ea;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f8fafc;
+  font-weight: 800;
+}
+
+.hb-timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.hb-split {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.65fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.hb-list-button {
+  width: 100%;
+  justify-content: space-between;
+  border: 0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0;
+}
+
+.hb-stack {
+  display: grid;
+  gap: 4px;
+}
+
+.hb-profile {
+  max-width: 780px;
+}
+
+.hb-empty {
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.hb-toast {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(420px, calc(100vw - 32px));
+  border: 1px solid #99f6e4;
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #f0fdfa;
+  color: #115e59;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+  font-weight: 800;
+}
+
+.hb-toast button {
+  min-height: 28px;
+  padding: 3px 8px;
+}
+
+.hb-skeleton span,
+.hb-skeleton strong,
+.hb-skeleton p {
+  display: block;
+  min-height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e2e8f0, #f8fafc, #e2e8f0);
+  background-size: 200% 100%;
+  animation: hb-shimmer 1.2s infinite;
+}
+
+.hb-skeleton strong {
+  width: 65%;
+  min-height: 28px;
+}
+
+.hb-skeleton p {
+  width: 85%;
+}
+
+@keyframes hb-shimmer {
+  to { background-position: -200% 0; }
+}
+
+@media (max-width: 980px) {
+  .hb-auth-hero,
+  .hb-shell,
+  .hb-dashboard,
+  .hb-search,
+  .hb-split,
+  .hb-jobs {
+    grid-template-columns: 1fr;
+  }
+
+  .hb-shell > aside {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 40;
+    width: 280px;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+  }
+
+  .hb-shell > aside.open {
+    transform: translateX(0);
+  }
+
+  .hb-menu {
+    display: inline-flex;
+  }
+
+  .hb-topbar {
+    display: grid;
+  }
+
+  .hb-user-chip {
+    justify-items: start;
+  }
+
+  .hb-workspace {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hb-auth {
+    padding: 18px;
+  }
+
+  .hb-auth-hero {
+    gap: 18px;
+  }
+
+  .hb-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
