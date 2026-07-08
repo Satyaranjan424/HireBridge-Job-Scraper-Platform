@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import AuthLayout from '../../layouts/AuthLayout';
 import { useAuth } from '../../context/AuthContext';
 import { navigate, pathForRole } from '../../routes/router';
 
@@ -24,7 +23,6 @@ export default function Register() {
   }
 
   return (
-    <AuthLayout>
       <section className="hb-auth">
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -260,6 +258,5 @@ export default function Register() {
           </form>
         </div>
       </section>
-    </AuthLayout>
   );
 }

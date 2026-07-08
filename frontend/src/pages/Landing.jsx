@@ -92,7 +92,7 @@ export default function Landing() {
         }
         .hb-hero-side {
           position: relative;
-          padding: 84px clamp(24px, 6vw, 72px) 64px;
+          padding: 0px clamp(24px, 6vw, 72px) 130px;
           display: flex; flex-direction: column; justify-content: center;
         }
         .hb-hero-side.student { background: var(--paper); }
