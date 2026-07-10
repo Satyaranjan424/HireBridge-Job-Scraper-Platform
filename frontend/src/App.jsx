@@ -1,5 +1,4 @@
 import './App.css';
-import './HireBridge.css';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
 import AppRoutes from './routes/AppRoutes';

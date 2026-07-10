@@ -47,7 +47,7 @@
 .hb-header-inner {
   max-width: 1160px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0px 0px;
+  padding: 17px 0px;
 }
 .hb-brand {
   background: none; font-family: var(--font-display);
